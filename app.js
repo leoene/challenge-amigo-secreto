@@ -27,7 +27,33 @@ function agregarAmigo() {
 
     input.value = "";
 
-
+    mostrarAmigo();
 }
+
+//Paso 3
+
+function mostrarAmigo() {
+    const ul =  document.getElementById('listaAmigos');
+    ul.innerHTML = ""
+
+    for (let i = 0; i < amigos.length; i++) {
+        const li = document.createElement('li');
+        li.textContent = amigos[i];
+        ul.appendChild(li);
+    }
+}
+
+//Paso 4
+
+function sortearAmigo () {
+    if (amigos.length === 0) {
+        alert("No hay nombres en la lista.");
+    }
+
+    const amigoSorteo = amigos[Math.floor(Math.random() * amigos.length)];
+    document.getElementById('resultado').innerHTML = `El amigo sorteado es ${amigoSorteo}.`;
+}
+
+
 
 
