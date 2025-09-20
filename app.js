@@ -17,10 +17,12 @@ function agregarAmigo() {
 
     if (nombre === "") {
         alert('Por favor, inserte un nombre.');
+        return;
     }
 
     if (amigos.includes(nombre)) {
-        alert("El nombre ya se encuentra en la lista.")
+        alert("El nombre ya se encuentra en la lista.");
+        return;
     }
 
     amigos.push(nombre);
