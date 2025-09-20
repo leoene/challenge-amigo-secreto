@@ -22,6 +22,7 @@ function agregarAmigo() {
 
     if (amigos.includes(nombre)) {
         alert("El nombre ya se encuentra en la lista.");
+        input.value = "";
         return;
     }
 
